@@ -6,16 +6,12 @@
 
 @font-face {
     font-family: 'ProximaNova';
-    font-weight: 400;
-    font-style: normal;
-    src: url(../fonts/proximanova_black.ttf) format('ttf');
+    src: url(fonts/ProximaNova/proximanova_regular.ttf);
 }
 
-@font-face{
-    font-family: 'ElMessiri';
-    font-weight: 400;
-    font-style: normal;
-    src: url(../fonts/ElMessiri.ttf) format('ttf');
+@font-face {
+	font-family: 'El Messiri'; 
+	src: url(fonts/ElMessiri/ElMessiri.ttf); 
 }
 
 html, body
@@ -33,19 +29,30 @@ header
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: 'ProximaNova';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
     
 
     & img
     {
         width: 60px;
         height: 60px;
+        transition: all linear 0.7s;
+    }
+
+    & img:hover
+    {
+        box-shadow:0 0 30px #FFF;
+        opacity: 1;
+        border-radius: 100px;
     }
 
     & ul
     {
         display: flex;
         gap: 50px;
-        font-family: 'ProximaNova';
 
         & li
         {
@@ -80,10 +87,26 @@ header
         width: 155px;
         height: 36px;
         padding: 9px;
+        padding-bottom: 17px;
         background-color: #018ABE;
+        border-color: #018ABE;
         font-size: 13px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
         border-radius: 5px;
         color: #FFF;
+        transition: box-shadow linear 0.2s;
+    }
+
+    & button:hover
+    {
+        box-shadow:0 0 30px #018ABE; 
+    }
+
+    & button:active
+    {
+        box-shadow:0 0 30px #FFF;
     }
 }
 
@@ -101,6 +124,7 @@ main
         bottom: 50px;
         opacity: 0.2;
         padding: 10px;
+        transition: all linear 0.3s;;
     }
 
     & .go_up:hover
@@ -120,19 +144,40 @@ main
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 20px;
+    
 
 
         & h3
-        {
+        {   
+            font-family: 'El Messiri';
             text-align: center;
             font-size: 24px;
+            margin-bottom: 40px;
+        }
+
+        & h3::after
+        {
+            content: url(img/Petals/Petal_white_right.svg);
+            position: relative;
+            left: 66px;
+            bottom: 5px;
+        }
+
+        & h3::before
+        {
+            content: url(img/Petals/Petal_white_left.svg);
+            position: relative;
+            right: 66px;
+            bottom: 5px;
         }
 
         & h1
         {
+            font-family: 'El Messiri';
             text-align: center;
+            line-height: 90px;
             font-size: 64px;
+            margin-bottom: 65px;
         }
     }
 
@@ -144,11 +189,28 @@ main
         display: flex;
         flex-direction: column;
         gap: 100px;
+        font-family: 'El Messiri';
 
         & h2
         {
             text-align: center;
             font-size: 42px;
+        }
+
+        & h2::after
+        {
+            content: url(img/Petals/Petal_blue_right.svg);
+            position: relative;
+            left: 45px;
+            bottom: 5px;
+        }
+
+        & h2::before
+        {
+            content: url(img/Petals/Petal_blue_left.svg);
+            position: relative;
+            right: 45px;
+            bottom: 5px;
         }
 
         & .index_box2_cont
@@ -164,7 +226,8 @@ main
                 height: 540px;
                 display: flex;
                 background-image: url(img/left_pic.png);
-                
+                transition: all linear 0.5s;
+                cursor: pointer;
                 & p
                 {
                     font-size: 24px;
@@ -173,6 +236,12 @@ main
                 }
             }
           
+            & .box1:hover
+            {
+                box-shadow:0 0 30px #018ABE;
+                border-radius: 11px;
+            }
+
             & .box2
             {
                 display: flex;
@@ -180,7 +249,8 @@ main
                 width: 416px;
                 height: 540px;
                 gap: 24px;
-
+                
+                
                 & .box2_1
                 {
                     display: flex;
@@ -189,7 +259,8 @@ main
                     background-image: url(img/pics.png);
                     justify-content: space-between;
                     align-items: flex-end;
-
+                    transition: all linear 0.5s;
+                    cursor: pointer;
                     & p
                 {
                     font-size: 24px;
@@ -197,6 +268,12 @@ main
                     margin: 194px 40px 30px 40px;
                 }
 
+                }
+
+                & .box2_1:hover
+                {
+                    box-shadow:0 0 30px #018ABE;
+                    border-radius: 11px;
                 }
 
                 & .box2_2
@@ -207,7 +284,8 @@ main
                     background-image: url(img/pics.png);
                     justify-content: space-between;
                     align-items: flex-end;
-
+                    transition: all linear 0.5s;
+                    cursor: pointer;
                     & p
                     {
                         font-size: 24px;
@@ -215,6 +293,13 @@ main
                         margin: 194px 40px 30px 40px;
                     }
                 }
+                
+                & .box2_2:hover
+                {
+                    box-shadow:0 0 30px #018ABE;
+                    border-radius: 11px;
+                }
+            
             }
 
             & .box3
@@ -233,13 +318,20 @@ main
                     background-image: url(img/pics.png);
                     justify-content: space-between;
                     align-items: flex-end;
-
+                    transition: all linear 0.5s;
+                    cursor: pointer;
                     & p
                     {
                         font-size: 24px;
                         font-style: normal;
                         margin: 160px 40px 30px 40px;
                     }
+                }
+
+                & .box3_1:hover
+                {
+                    box-shadow:0 0 30px #018ABE;
+                    border-radius: 11px;
                 }
 
                 & .box3_2
@@ -250,13 +342,21 @@ main
                     background-image: url(img/pics.png);
                     justify-content: space-between;
                     align-items: flex-end;
-
+                    transition: all linear 0.5s;
+                    cursor: pointer;
                     & p
                     {
                         font-size: 24px;
                         font-style: normal;
                         margin: 160px 40px 30px 40px;
                     }
+                
+                }
+               
+                & .box3_2:hover
+                {
+                    box-shadow:0 0 30px #018ABE;
+                    border-radius: 11px;
                 }
             }
         }
@@ -270,11 +370,29 @@ main
         gap: 100px;
         width: 1736px;
         height: 585px;
+        font-family: 'ProximaNova';
 
         & h2
         {
             text-align: center;
             font-size: 42px;
+            font-family: 'El Messiri';
+        }
+
+        & h2::after
+        {
+            content: url(img/Petals/Petal_blue_right.svg);
+            position: relative;
+            left: 45px;
+            bottom: 5px;
+        }
+
+        & h2::before
+        {
+            content: url(img/Petals/Petal_blue_left.svg);
+            position: relative;
+            right: 45px;
+            bottom: 5px;
         }
 
         & .index_box3_cont
@@ -298,7 +416,7 @@ main
                 & .rev_name
                 {
                     width: 410px;
-                    height: 22px;
+                    height: 16px;
                     font-size: 16px;
                     margin: 40px 45px 15px 45px;
                     font-weight: bold;
@@ -331,7 +449,7 @@ main
                 {
                     width: 410px;
                     height: 22px;
-                    font-size: 16px;
+                    font-size: 20px;
                     margin: 40px 45px 15px 60px;
                     font-weight: bold;
                 }
@@ -363,7 +481,7 @@ main
                 & .rev_name
                 {
                     width: 410px;
-                    height: 22px;
+                    height: 16px;
                     font-size: 16px;
                     margin: 40px 45px 15px 45px;
                     font-weight: bold;
@@ -404,6 +522,23 @@ main
             font-size: 42px;
             font-style: normal;
             font-weight: 700;
+            font-family: 'El Messiri';
+        }
+
+        & h2::after
+        {
+            content: url(img/Petals/Petal_blue_right.svg);
+            position: relative;
+            left: 45px;
+            bottom: 5px;
+        }
+
+        & h2::before
+        {
+            content: url(img/Petals/Petal_blue_left.svg);
+            position: relative;
+            right: 45px;
+            bottom: 5px;
         }
 
         & .index_box4_cont
@@ -414,6 +549,7 @@ main
             width: 1076px;
             height: 865px;
             gap: 24px;
+            font-family: 'ProximaNova';
 
             & .index_box4_cont1
             {
@@ -432,9 +568,9 @@ main
 
                 & .index_box4_cont_all_text
                 {
-                    font-size: 15px;
+                    font-size: 14px;
                     font-style: normal;
-                    font-weight: 100;
+                    font-weight: 300;
                     width: 466px;
                     height: 243px;
                     line-height: 140%;
@@ -466,9 +602,9 @@ main
                 
                 & .index_box4_cont_all_text
                 {
-                    font-size: 15px;
+                    font-size: 14px;
                     font-style: normal;
-                    font-weight: 100;
+                    font-weight: 300;
                     width: 466px;
                     height: 302px;
                     line-height: 140%;
@@ -490,13 +626,32 @@ main
         height: 614px;
         margin: auto;
         gap: 100px;
+        
 
         & h2
         {
+            font-family: 'El Messiri';
             text-align: center;
             font-size: 42px;
             font-style: normal;
             font-weight: 700;
+            line-height: 140%;
+        }
+
+        & h2::after
+        {
+            content: url(img/Petals/Petal_blue_right.svg);
+            position: relative;
+            left: 45px;
+            bottom: 5px;
+        }
+
+        & h2::before
+        {
+            content: url(img/Petals/Petal_blue_left.svg);
+            position: relative;
+            right: 45px;
+            bottom: 5px;
         }
 
         & .index_box5_cont
@@ -505,6 +660,7 @@ main
             width: 1076px;
             height: 455px;
             gap: 23px;
+            font-family: 'ProximaNova';
 
             & .price_list
             {   
@@ -521,7 +677,7 @@ main
                     font-style: normal;
                     font-weight: 400;
                     padding-left: 20px;
-                    line-height: 41px;
+                    line-height: 50px;
                 }
             }
             
@@ -533,7 +689,7 @@ main
                 font-size: 18px;
                 font-style: normal;
                 font-weight: 400;
-                line-height: 41px;
+                line-height: 50px;
                 width: 196px;
                 height: 455px;
 
@@ -555,7 +711,8 @@ main
                 text-align: center;
 
                 & span
-                {
+                {   
+                    font-family: 'El Messiri';
                     margin-top: 30px;
                     font-size: 21px;
                     font-style: normal;
@@ -595,6 +752,7 @@ footer
             display: flex;
             gap: 24px;
             flex-direction: column;
+            font-family: 'ProximaNova';
 
             & .adr_1
             {
@@ -604,7 +762,8 @@ footer
                 height: 290px;
 
                 & h3
-                {
+                {   
+                    font-family: 'El Messiri';
                     font-size: 24px;
                     font-style: normal;
                     font-weight: 700;
@@ -636,12 +795,20 @@ footer
                     font-size: 13px;
                     border-radius: 5px;
                     color: #018ABE;
+                    border-color: #018ABE;
                     font-size: 13px;
                     font-style: normal;
                     font-weight: 600;
                     margin: 0px 192px 89px 45px;
+                    cursor: pointer;
+                    transition: all linear 0.5s;
                 }
             
+                & button:hover
+                {
+                    box-shadow:0 0 30px #FFF;
+                }
+
             }
 
             & .adr_2
@@ -652,7 +819,8 @@ footer
                 height: 290px;
 
                 & h3
-                {
+                {   
+                    font-family: 'El Messiri';
                     font-size: 24px;
                     font-style: normal;
                     font-weight: 700;
@@ -684,12 +852,19 @@ footer
                     font-size: 13px;
                     border-radius: 5px;
                     color: #018ABE;
+                    border-color: #018ABE;
                     font-size: 13px;
                     font-style: normal;
                     font-weight: 600;
                     margin: 0px 192px 89px 45px;
+                    cursor: pointer;
+                    transition: all linear 0.5s;
                 }
-            
+                
+                & button:hover
+                {
+                    box-shadow:0 0 30px #FFF;
+                }
             }
 
         }
@@ -697,6 +872,11 @@ footer
 
     & .index_ft_box2
     {
+    font-family: 'ProximaNova';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 135%;
     width: 1296px;
     height: 19px;
     margin: auto;
