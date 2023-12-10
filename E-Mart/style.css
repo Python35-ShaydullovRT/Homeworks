@@ -13,6 +13,11 @@
     src: url(fonts/DancingScript.ttf);
 }
 
+@font-face {
+    font-family: "Mukta";
+    src: url(fonts/Mukta-Regular.ttf);
+}
+
 *
 {
     padding: 0px;
@@ -391,52 +396,58 @@ header
             }
         }
         
-        & .header-content2-lin
-        {
-            position: absolute;
-            content: url(img/strelka/Liniua.svg);
-            top: 31%;
-            right: 26%;
+       & .header-content2-strelka
+       {
+        top: 17%;
+        position: relative;
+        height: 140px;
+        width: 180px;
+
+            & p
+            {
+             position: absolute;
+             top: 0px;
+             width: 125px;
+             height: 37px;
+             color: #4E6E77;
+             font-family: Dosis;
+             font-size: 16px;
+             font-style: normal;
+             font-weight: 500;
+             line-height: normal;
+            }
+            
+            & .header-content2-strelka-kon
+            {
+                position: absolute;
+                top: 8px;
+                right: 54px;
+            }
+
+            & .header-content2-strelka-lin
+            {
+                position: absolute;
+                bottom: 4px;
+                right: 5px;
+            }
+
+            & .header-content2-strelka-wd
+            {
+                position: absolute;
+                bottom: 2px;
+                right: 2px;
+            }
+
+            & .header-content2-strelka-bd
+            {
+                position: absolute;
+                bottom: 4px;
+                right: 4px;
+            }
+       
         }
 
-        & .header-content2-kon
-        {
-            position: absolute;
-            content: url(img/strelka/Konec.svg);
-            top: 30.6%;
-            right: 28.6%;
-        }
-
-        & .header-content2-wd
-        {
-            position: absolute;
-            content: url(img/strelka/WhiteDot.svg);
-            top: 43.9%;
-            right: 25.85%;
-        }
         
-        & .header-content2-bd
-        {
-            position: absolute;
-            content: url(img/strelka/BlueDot.svg);
-            top: 44.1%;
-            right: 25.94%;
-        }
-
-        & p
-        {
-         position: absolute;
-         top: 30%;
-         right: 29%;
-         width: 125px;
-         height: 37px;
-         color: #4E6E77;
-         font-family: Dosis;
-         font-size: 16px;
-         font-style: normal;
-         font-weight: 500;
-         line-height: normal;
-        }
     }
 }
 
@@ -465,7 +476,7 @@ main
     {
         width: 76%;
         height: 1000px;
-        margin: 100px auto 0px;
+        margin: 100px auto 120px;
         
         & h2
         {
@@ -484,7 +495,8 @@ main
             {
                 list-style: none;
                 display: flex;
-                justify-content: space-around;
+                justify-content: center;
+                gap: 30px;
                 color: #748289;
                 font-family: OpenSans;
                 font-size: 17px;
@@ -497,7 +509,7 @@ main
                     text-decoration: none;
                     color: #748289;
                     border: 2px solid rgba(252, 252, 252, 0);
-                    padding: 6px 5px 6px 5px;
+                    padding: 6px 20px 6px 20px;
                 }
 
                 & a:hover
@@ -509,49 +521,1305 @@ main
     
         & .main-products
         {
+            margin-top: 35px;
             width: 100%;
             height: 800px;
             display: flex;
+            justify-content: center;
+            gap: 30px;
 
             & .main-products-1
             {
-                width: 30%;
+                width: 350px;
                 height: 800px;
                 display: flex;
                 flex-direction: column;
+                gap: 30px;
             }
 
             & .main-products-1-tovar1
             {
-                width: 100%;
-                height: 390px;
+                width: 350px;
+                height: 370px;
                 display: flex;
                 flex-direction: column;
+                align-items: center;
+                gap: 5px;
 
                 & .main-products-1-tovar1-card1
                 {
-                    width: 100%;
-                    height: 390px;
-                    background-image: url(img/OurProduts/background.png);
-                    background-repeat: no-repeat;
+                    width: 350px;
+                    height: 316px;
+                    background-color: #F3F3F3;
+                    box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.2);
                     position: relative;
-                    background-size: cover;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     
 
                     & .main-products-1-tovar1-card1-photo
                     {
-                        position: absolute;
-                        top: 70px;
-                        left: 24px;
+                       margin-right: 30px;
                     }
 
-                    & .main-products-1-tovar1-card1-butts
+                    & .main-products-1-tovar1-card1-discount
                     {
                         position: absolute;
-                        bottom: 20px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        right: 23px;
+                        top: 30px;
+                        background-color: #264A51;
+                        width: 38px;
+                        height: 38px;
+                        color: #FFF;
+                        font-family: Mukta;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 500;
+                        border-radius: 50%;
+                    }
+
+                    & .main-products-1-tovar1-card1-new
+                    {
+                        position: absolute;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        right: 23px;
+                        top: 85px;
+                        background-color: #71B3C6;
+                        width: 38px;
+                        height: 38px;
+                        color: #FFF;
+                        font-family: Mukta;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 500;
+                        border-radius: 50%;
+                    }
+
+                    & .main-products-1-tovar1-card1-oos
+                    {
+                        position: absolute;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        top: 150px;
+                        right: 0px;
+                        background-color: #264A51;
+                        border-radius: 2px 0px 0px 2px;
+                        width: 85px;
+                        height: 30px;
+                        color: #FFF;
+                        font-family: Mukta;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 500;
+                    }
+
+                    & .buttoms
+                    {
+                        position: absolute;
+                        bottom: 15px;
                         left: 75px;
+                        display: flex;
+                        width: 200px;
+                        height: 38px;
+                        gap: 12px;
+                        justify-content: space-evenly;
+
+                        & img
+                        {
+                            background-color: #71B3C6;
+                            border-radius: 5px;
+                            padding: 10px;
+                            transition: all linear 0.2s;
+                        }
+
+                        & img:hover
+                        {
+                            box-shadow: 1px 1px 8px 4px #71B3C6;
+                        }
+                    }
+
+                }
+                
+                & .under-cards
+                {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 111px;
+                    height: 50px;
+                    gap: 5px;
+                    color: #264A51;
+                    font-family: Mukta;
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 133.5%;
+                }
+            
+            }
+
+            & .main-products-1-tovar2
+            {
+                width: 350px;
+                height: 370px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+
+                & .main-products-1-tovar2-card1
+                {
+                    width: 350px;
+                    height: 316px;
+                    background-color: #F3F3F3;
+                    box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.2);
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+
+                    & .main-products-1-tovar2-card1-photo
+                    {
+                       margin-right: 30px;
+                    }
+
+                    & .main-products-1-tovar2-card1-discount
+                    {
+                        position: absolute;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        right: 23px;
+                        top: 30px;
+                        background-color: #264A51;
+                        width: 38px;
+                        height: 38px;
+                        color: #FFF;
+                        font-family: Mukta;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 500;
+                        border-radius: 50%;
+                    }
+
+                    & .main-products-1-tovar2-card1-new
+                    {
+                        position: absolute;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        right: 23px;
+                        top: 85px;
+                        background-color: #71B3C6;
+                        width: 38px;
+                        height: 38px;
+                        color: #FFF;
+                        font-family: Mukta;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 500;
+                        border-radius: 50%;
+                    }
+
+                    & .main-products-1-tovar2-card1-oos
+                    {
+                        position: absolute;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        top: 150px;
+                        right: 0px;
+                        background-color: #264A51;
+                        border-radius: 2px 0px 0px 2px;
+                        width: 85px;
+                        height: 30px;
+                        color: #FFF;
+                        font-family: Mukta;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 500;
+                    }
+
+                    & .buttoms
+                    {
+                        position: absolute;
+                        bottom: 15px;
+                        left: 75px;
+                        display: flex;
+                        width: 200px;
+                        height: 38px;
+                        gap: 12px;
+                        justify-content: space-evenly;
+
+                        & img
+                        {
+                            background-color: #71B3C6;
+                            border-radius: 5px;
+                            padding: 10px;
+                            transition: all linear 0.2s;
+                        }
+
+                        & img:hover
+                        {
+                            box-shadow: 1px 1px 8px 4px #71B3C6;
+                        }
+                    }
+
+                }
+                
+                & .under-cards
+                {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 111px;
+                    height: 50px;
+                    gap: 5px;
+                    color: #264A51;
+                    font-family: Mukta;
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 133.5%;
+                }
+            
+            }
+
+            & .main-products-2
+            {
+                width: 350px;
+                height: 800px;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            & .main-products-2-tovar1
+            {
+                width: 350px;
+                height: 370px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+
+                & .main-products-2-tovar1-card1
+                {
+                    width: 350px;
+                    height: 316px;
+                    background-color: #F3F3F3;
+                    box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.2);
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+
+                    & .main-products-2-tovar1-card1-photo
+                    {
+                       margin-right: 30px;
+                    }
+
+                    & .main-products-2-tovar1-card1-discount
+                    {
+                        position: absolute;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        right: 23px;
+                        top: 30px;
+                        background-color: #264A51;
+                        width: 38px;
+                        height: 38px;
+                        color: #FFF;
+                        font-family: Mukta;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 500;
+                        border-radius: 50%;
+                    }
+
+                    & .buttoms
+                    {
+                        position: absolute;
+                        bottom: 15px;
+                        left: 75px;
+                        display: flex;
+                        width: 200px;
+                        height: 38px;
+                        gap: 12px;
+                        justify-content: space-evenly;
+
+                        & img
+                        {
+                            background-color: #71B3C6;
+                            border-radius: 5px;
+                            padding: 10px;
+                            transition: all linear 0.2s;
+                        }
+
+                        & img:hover
+                        {
+                            box-shadow: 1px 1px 8px 4px #71B3C6;
+                        }
+                    }
+
+                }
+                
+                & .under-cards
+                {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 111px;
+                    height: 50px;
+                    gap: 5px;
+                    color: #264A51;
+                    font-family: Mukta;
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 133.5%;
+                }
+            
+            }
+
+            & .main-products-2-tovar2
+            {
+                width: 350px;
+                height: 370px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+
+                & .main-products-2-tovar2-card1
+                {
+                    width: 350px;
+                    height: 316px;
+                    background-color: #F3F3F3;
+                    box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.2);
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+
+                    & .main-products-2-tovar2-card1-photo
+                    {
+                       margin-right: 30px;
+                    }
+
+                    & .main-products-2-tovar2-card1-discount
+                    {
+                        position: absolute;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        right: 23px;
+                        top: 30px;
+                        background-color: #264A51;
+                        width: 38px;
+                        height: 38px;
+                        color: #FFF;
+                        font-family: Mukta;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 500;
+                        border-radius: 50%;
+                    }
+
+                    & .main-products-2-tovar2-card1-new
+                    {
+                        position: absolute;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        right: 23px;
+                        top: 85px;
+                        background-color: #71B3C6;
+                        width: 38px;
+                        height: 38px;
+                        color: #FFF;
+                        font-family: Mukta;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 500;
+                        border-radius: 50%;
+                    }
+
+                    & .buttoms
+                    {
+                        position: absolute;
+                        bottom: 15px;
+                        left: 75px;
+                        display: flex;
+                        width: 200px;
+                        height: 38px;
+                        gap: 12px;
+                        justify-content: space-evenly;
+
+                        & img
+                        {
+                            background-color: #71B3C6;
+                            border-radius: 5px;
+                            padding: 10px;
+                            transition: all linear 0.2s;
+                        }
+
+                        & img:hover
+                        {
+                            box-shadow: 1px 1px 8px 4px #71B3C6;
+                        }
+                    }
+
+                }
+                
+                & .under-cards
+                {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 111px;
+                    height: 50px;
+                    gap: 5px;
+                    color: #264A51;
+                    font-family: Mukta;
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 133.5%;
+                }
+            
+            }
+
+            & .main-products-3
+            {
+                width: 350px;
+                height: 800px;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            & .main-products-3-tovar1
+            {
+                width: 350px;
+                height: 370px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+
+                & .main-products-3-tovar1-card1
+                {
+                    width: 350px;
+                    height: 316px;
+                    background-color: #F3F3F3;
+                    box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.2);
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+
+                    & .main-products-3-tovar1-card1-photo
+                    {
+                       margin-right: 30px;
+                    }
+
+                    & .main-products-3-tovar1-card1-discount
+                    {
+                        position: absolute;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        right: 23px;
+                        top: 30px;
+                        background-color: #264A51;
+                        width: 38px;
+                        height: 38px;
+                        color: #FFF;
+                        font-family: Mukta;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 500;
+                        border-radius: 50%;
+                    }
+
+                    & .main-products-3-tovar1-card1-new
+                    {
+                        position: absolute;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        right: 23px;
+                        top: 85px;
+                        background-color: #71B3C6;
+                        width: 38px;
+                        height: 38px;
+                        color: #FFF;
+                        font-family: Mukta;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 500;
+                        border-radius: 50%;
+                    }
+
+                    & .main-products-3-tovar1-card1-oos
+                    {
+                        position: absolute;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        top: 150px;
+                        right: 0px;
+                        background-color: #264A51;
+                        border-radius: 2px 0px 0px 2px;
+                        width: 85px;
+                        height: 30px;
+                        color: #FFF;
+                        font-family: Mukta;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 500;
+                    }
+
+                    & .buttoms
+                    {
+                        position: absolute;
+                        bottom: 15px;
+                        left: 75px;
+                        display: flex;
+                        width: 200px;
+                        height: 38px;
+                        gap: 12px;
+                        justify-content: space-evenly;
+
+                        & img
+                        {
+                            background-color: #71B3C6;
+                            border-radius: 5px;
+                            padding: 10px;
+                            transition: all linear 0.2s;
+                        }
+
+                        & img:hover
+                        {
+                            box-shadow: 1px 1px 8px 4px #71B3C6;
+                        }
+                    }
+
+                }
+                
+                & .under-cards
+                {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 111px;
+                    height: 50px;
+                    gap: 5px;
+                    color: #264A51;
+                    font-family: Mukta;
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 133.5%;
+                }
+            
+            }
+
+            & .main-products-3-tovar2
+            {
+                width: 350px;
+                height: 370px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+
+                & .main-products-3-tovar2-card1
+                {
+                    width: 350px;
+                    height: 316px;
+                    background-color: #F3F3F3;
+                    box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.2);
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+
+                    & .main-products-3-tovar2-card1-photo
+                    {
+                       margin-right: 30px;
+                    }
+
+                    & .main-products-3-tovar2-card1-discount
+                    {
+                        position: absolute;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        right: 23px;
+                        top: 30px;
+                        background-color: #264A51;
+                        width: 38px;
+                        height: 38px;
+                        color: #FFF;
+                        font-family: Mukta;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 500;
+                        border-radius: 50%;
+                    }
+
+                    & .main-products-3-tovar2-card1-new
+                    {
+                        position: absolute;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        right: 23px;
+                        top: 85px;
+                        background-color: #71B3C6;
+                        width: 38px;
+                        height: 38px;
+                        color: #FFF;
+                        font-family: Mukta;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 500;
+                        border-radius: 50%;
+                    }
+
+                    & .main-products-3-tovar2-card1-oos
+                    {
+                        position: absolute;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        top: 150px;
+                        right: 0px;
+                        background-color: #264A51;
+                        border-radius: 2px 0px 0px 2px;
+                        width: 85px;
+                        height: 30px;
+                        color: #FFF;
+                        font-family: Mukta;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 500;
+                    }
+
+                    & .buttoms
+                    {
+                        position: absolute;
+                        bottom: 15px;
+                        left: 75px;
+                        display: flex;
+                        width: 200px;
+                        height: 38px;
+                        gap: 12px;
+                        justify-content: space-evenly;
+
+                        & img
+                        {
+                            background-color: #71B3C6;
+                            border-radius: 5px;
+                            padding: 10px;
+                            transition: all linear 0.2s;
+                        }
+
+                        & img:hover
+                        {
+                            box-shadow: 1px 1px 8px 4px #71B3C6;
+                        }
+                    }
+
+                }
+                
+                & .under-cards
+                {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 111px;
+                    height: 50px;
+                    gap: 5px;
+                    color: #264A51;
+                    font-family: Mukta;
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 133.5%;
+                }
+            
+            }
+        }
+    }
+
+    & .main-wts
+    {
+        width: 100%;
+        height: 1080px;
+        background-image: url(img/Background-wd.png);
+        background-repeat: repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+
+        & .main-wts-cont
+        {
+            height: 350px;
+            width: 510px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 15%;
+
+            & .main-wts-cont-disc
+            {
+                width: 340px;
+                height: 120px;
+                color: #F3B705;
+                font-family: Dosis;
+                font-size: 90px;
+                font-style: normal;
+                font-weight: 800;
+                text-align: center;
+            }
+
+            & .main-wts-cont-name
+            {
+                text-align: center;
+                width: 530px;
+                height: 76px;
+                color: #264A51;
+                font-family: Dosis;
+                font-size: 60px;
+                font-style: normal;
+                font-weight: 600;
+            }
+
+            & p
+            {
+                width: 360px;
+                height: 90px;
+                color: #335E74;
+                text-align: center;
+                font-family: Mukta;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 400;
+                margin-top: 15px;
+            }
+        
+
+            & .main-wts-cont-via
+            {
+                text-decoration: none;
+                margin-top: 24px;
+
+                    & .main-wts-cont-vi
+                    {
+                        color: #264A51;
+                        font-family: OpenSans;
+                        font-size: 15px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;  
+                        border: 2px solid #002A32;
+                        padding: 8px 17px 8px 17px;
+
                     }
                 }
+                
+        }
+    }
+
+    & .main-items
+    {
+        width: 76%;
+        height: 2210px;
+        margin: 120px auto;
+        display: flex;
+        gap: 115px;
+        flex-direction: column;
+        align-items: center;
+
+
+        & .main-items-1
+        {
+            width: 80%;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 45px;
+            position: relative;
+
+            & .main-items-1-img
+            {
+                position: relative;
+                
+                & .blue-text
+                {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    width: 150px;
+                    height: 170px;
+                    background: rgba(113, 179, 198, 0.85);
+                    color: #FFF;
+                    font-family: Dosis;
+                    font-size: 25px;
+                    font-style: normal;
+                    font-weight: 600;
+                    bottom: 10%;
+                    right: -13%;
+                }
+
+                & img
+                {
+                    width: 600px;
+                    height: 600px;
+                }
+            }
+
+            & .main-items-1-text
+            {
+                height: 250px;
+                width: 49%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+
+                & h3
+                {
+                    color: #264A51;
+                    font-family: Dosis;
+                    font-size: 39px;
+                    font-style: normal;
+                    font-weight: 600;
+                }
+
+                & p
+                {
+                    color: #335E74;
+                    text-align: center;
+                    font-family: Mukta;
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 400;
+                    width: 450px;
+                    height: 143px;
+                }
+            
+                & .main-items-1-text-butt
+                {
+                    text-decoration: none;
+    
+                        & .main-items-1-text-butt-rm
+                        {
+                            color: #264A51;
+                            font-family: OpenSans;
+                            font-size: 15px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: normal;  
+                            border: 2px solid #002A32;
+                            padding: 8px 17px 8px 17px;
+    
+                        }
+                }
+            
+            }
+        
+        }
+
+        & .main-items-2
+        {
+            width: 80%;
+            height: 416px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 45px;
+            position: relative;
+            flex-direction: row-reverse;
+
+            & .main-items-2-img
+            {
+                position: relative;
+                
+                & .blue-text
+                {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    width: 150px;
+                    height: 170px;
+                    background: rgba(113, 179, 198, 0.85);
+                    color: #FFF;
+                    font-family: Dosis;
+                    font-size: 25px;
+                    font-style: normal;
+                    font-weight: 600;
+                    bottom: 14%;
+                    left: -12%;
+                }
+
+                & img
+                {
+                    width: 626px;
+                    height: 416px;
+                }
+            }
+
+            & .main-items-2-text
+            {
+                height: 250px;
+                width: 49%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+
+                & h3
+                {
+                    color: #264A51;
+                    font-family: Dosis;
+                    font-size: 46px;
+                    font-style: normal;
+                    font-weight: 600;
+                }
+
+                & p
+                {
+                    color: #335E74;
+                    text-align: center;
+                    font-family: Mukta;
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 400;
+                    width: 350px;
+                    height: 99px;
+                }
+            
+                & .main-items-2-text-butt
+                {
+                    text-decoration: none;
+    
+                        & .main-items-2-text-butt-rm
+                        {
+                            color: #264A51;
+                            font-family: OpenSans;
+                            font-size: 15px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: normal;  
+                            border: 2px solid #002A32;
+                            padding: 8px 17px 8px 17px;
+    
+                        }
+                }
+            
+            }
+        
+        }
+
+        & .main-items-3
+        {
+            width: 80%;
+            height: 416px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 45px;
+            position: relative;
+
+            & .main-items-3-img
+            {
+                position: relative;
+                
+                & .blue-text
+                {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    width: 150px;
+                    height: 170px;
+                    background: rgba(113, 179, 198, 0.85);
+                    color: #FFF;
+                    font-family: Dosis;
+                    font-size: 25px;
+                    font-style: normal;
+                    font-weight: 600;
+                    bottom: 14%;
+                    right: -12%;
+                }
+
+                & img
+                {
+                    width: 626px;
+                    height: 416px;
+                }
+            }
+
+            & .main-items-3-text
+            {
+                height: 250px;
+                width: 49%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+
+                & h3
+                {
+                    color: #264A51;
+                    font-family: Dosis;
+                    font-size: 46px;
+                    font-style: normal;
+                    font-weight: 600;
+                }
+
+                & p
+                {
+                    color: #335E74;
+                    text-align: center;
+                    font-family: Mukta;
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 400;
+                    width: 350px;
+                    height: 99px;
+                }
+            
+                & .main-items-3-text-butt
+                {
+                    text-decoration: none;
+    
+                    & .main-items-3-text-butt-rm
+                    {
+                        color: #264A51;
+                        font-family: OpenSans;
+                        font-size: 15px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;  
+                        border: 2px solid #002A32;
+                        padding: 8px 17px 8px 17px;
+
+                    }
+                }
+            
+            }
+        
+        }
+    
+        & .main-items-4
+        {
+            width: 80%;
+            height: 416px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 45px;
+            position: relative;
+            flex-direction: row-reverse;
+
+            & .main-items-4-img
+            {
+                position: relative;
+                
+                & .blue-text
+                {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    width: 150px;
+                    height: 170px;
+                    background: rgba(113, 179, 198, 0.85);
+                    color: #FFF;
+                    font-family: Dosis;
+                    font-size: 25px;
+                    font-style: normal;
+                    font-weight: 600;
+                    bottom: 14%;
+                    left: -12%;
+                }
+
+                & img
+                {
+                    width: 626px;
+                    height: 416px;
+                }
+            }
+
+            & .main-items-4-text
+            {
+                height: 250px;
+                width: 49%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+
+                & h3
+                {
+                    color: #264A51;
+                    font-family: Dosis;
+                    font-size: 46px;
+                    font-style: normal;
+                    font-weight: 600;
+                    
+                }
+
+                & p
+                {
+                    color: #335E74;
+                    text-align: center;
+                    font-family: Mukta;
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 400;
+                    width: 350px;
+                    height: 99px;
+                }
+            
+                & .main-items-4-text-butt
+                {
+                    text-decoration: none;
+    
+                        & .main-items-4-text-butt-rm
+                        {
+                            color: #264A51;
+                            font-family: OpenSans;
+                            font-size: 15px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: normal;  
+                            border: 2px solid #002A32;
+                            padding: 8px 17px 8px 17px;
+    
+                        }
+                }
+            
+            }
+        
+        }
+    
+    }
+
+    & .main-subscribe
+    {
+        width: 100%;
+        height: 750px;
+        background-image: url(img/Subscribe/bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 120px;
+
+        & .main-subscribe-blue
+        {
+            width: 100%;
+            height: 750px;
+            background: rgba(93, 155, 201, 0.69);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & .main-subscribe-cont
+            {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                width: 460px;
+                height: 200px;
+
+                & h3
+                {
+                    width: 358px;
+                    height: 50px;
+                    color: #264A51;
+                    text-align: center;
+                    font-family: Dosis;
+                    font-size: 46px;
+                    font-style: normal;
+                    font-weight: 600;
+                }
+
+                & p
+                {
+                    display: flex;
+                    width: 389px;
+                    height: 59px;
+                    flex-direction: column;
+                    justify-content: center;
+                    color: #FFF;
+                    text-align: center;
+                    font-family: Mukta;
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 400;
+                }
+
+                & .main-subscribe-cont-input
+                {
+                    width: 460px;
+                    height: 46px;
+                    position: relative;
+                    & input
+                    {
+                        position: relative;
+                        border-radius: 50px;
+                        border: 0px solid #ACCAE0;
+                        background: #DAE5EE;
+                        width: 94%;
+                        height: 100%;
+                        padding-left: 27px;
+                    }
+
+                    & button
+                    {
+                        position: absolute;
+                        right: 0px;
+                        bottom: 0px;
+                        width: 136px;
+                        height: 46px;
+                        border: 0px;
+                        border-radius: 50px;
+                        background: rgba(38, 74, 81, 0.89);
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        color: #FFF;
+                        text-align: center;
+                        font-family: Mukta;
+                        font-size: 17px;
+                        font-style: normal;
+                        font-weight: 500;
+                    }
+                }
+
             }
         }
     }
