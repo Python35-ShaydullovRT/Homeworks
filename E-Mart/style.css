@@ -1824,3 +1824,207 @@ main
         }
     }
 }
+
+footer
+{
+    width: 100%;
+    height: 250px;
+
+    & .footer-conts
+    {
+        width: 80%;
+        height: 210px;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+
+        & .footer-conts-sn
+        {
+            height: 160px;
+            width: 227px;
+
+            & img
+            {
+                width: 94.565px;
+                height: 42.703px;
+            }
+
+            & p
+            {
+                width: 250px;
+                height: 59px;
+                color: #335E74;
+                font-family: OpenSans;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                margin-top: 12px;
+            }
+
+            & ul
+            {
+                display: flex;
+                list-style: none;
+                width: 180.835px;
+                height: 37px;
+                /* gap: 28px; */
+
+                & img
+                {
+                   height: 20px;
+                   width: 20px;
+                   transition: all linear 0.2s;
+                   border: #F3F3F3 solid 10px;
+                   border-radius: 50%;
+                }
+
+                & img:hover
+                {
+                    border: #002A32 solid 10px;
+                    background-color: #002A32;
+                }
+            }
+        }
+
+        & .footer-conts-nav
+        {
+            width: 158px;
+            height: 210px;
+
+            & h3
+            {
+                color: #264A51;
+                font-family: Mukta;
+                font-size: 25px;
+                font-style: normal;
+                font-weight: 700;
+            }
+
+            & ul
+            {
+                list-style: none;
+                color: #335E74;
+                font-family: OpenSans;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 30px;
+
+                & a
+                {
+                    text-decoration: none;
+                    color: #335E74;
+                }
+            }
+        }
+
+        & .footer-conts-cu
+        {
+            width: 228px;
+            height: 170px;
+
+            & h3
+            {
+                color: #264A51;
+                font-family: Mukta;
+                font-size: 25px;
+                font-style: normal;
+                font-weight: 700;
+            }
+
+            & div
+            {
+                color: #335E74;
+                font-family: OpenSans;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+                margin-top: 20px;
+
+                & ul
+                {
+                    list-style: none;
+
+                    & p
+                    {
+                        margin-bottom: 20px;
+                    }
+
+                    & a
+                    {
+                        text-decoration: none;
+                        color: #335E74;
+                    }
+                }
+            }
+        }
+
+        & .footer-conts-sh
+        {
+            height: 210px;
+            width: 235px;
+
+            & h3
+            {
+                color: #264A51;
+                font-family: Mukta;
+                font-size: 25px;
+                font-style: normal;
+                font-weight: 700;
+            }
+
+            & div
+            {
+                width: 234.786px;
+                height: 134px;
+                border-radius: 7px;
+                background: #A0C7EA;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 20px;
+
+                & ul
+                {
+                    list-style: none;
+                    line-height: 30px;
+                    color: #FFF;
+                    font-family: OpenSans;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 600;
+
+                    & span
+                    {
+                        color: #335E74;
+                    }
+                }
+            }
+        }
+    }
+
+    & .footer-copiright
+    {
+        background-color: #D3E2EF;
+        width: 100%;
+        height: 40px;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & p
+        {
+            color: #335E74;
+            font-family: Open Sans;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 30px;
+        }
+    }
+
+}
